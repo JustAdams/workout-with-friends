@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EXERCISES } from '../data/sample-exercises';
+import { Exercise } from '../models/exercise';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  exercises?: Exercise[];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.getExercises();
+  }
+
+  getExercises(): void {
+    this.exercises = EXERCISES;
   }
 
 }

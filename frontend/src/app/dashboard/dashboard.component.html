@@ -1,1 +1,12 @@
-<p>dashboard works!</p>
+<h1>Exercise Dashboard</h1>
+
+<p>Most recent exercises:</p>
+
+<div>
+    <div *ngFor="let exercise of exercises">
+        <p>{{ exercise.name }}</p>
+        <p>{{ exercise.weight }}</p>
+        <p>{{ exercise.reps }}</p>
+        <p>{{ exercise.name }}</p>
+    </div>
+</div>
