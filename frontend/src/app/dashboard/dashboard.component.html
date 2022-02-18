@@ -1,13 +1,22 @@
 <app-nav-bar></app-nav-bar>
-<h1>Exercise Dashboard</h1>
 
-<p>Most recent exercises:</p>
+<div class="container dashboard-container">
+    <h1 class="text-center">Exercise Dashboard</h1>
 
-<div>
-    <div *ngFor="let exercise of exercises">
-        <p>{{ exercise.name }}</p>
-        <p>{{ exercise.weight }}</p>
-        <p>{{ exercise.reps }}</p>
-        <p>{{ exercise.name }}</p>
+    <p>Recent exercises:</p>
+    <div>
+        <div class="row">
+            <p class="col-3">Who</p>
+            <p class="col-3">Exercise</p>
+            <p class="col-3">Weight</p>
+            <p class="col-3">Reps</p>
+        </div>
+        
+        <div *ngFor="let exercise of exercises" class="row exercise-row">
+            <p class="col-3">{{ exercise.person }}</p>
+            <p class="col-3">{{ exercise.name }}</p>
+            <p class="col-3">{{ exercise.weight }}lbs</p>
+            <p class="col-3">{{ exercise.reps }} reps</p>
+        </div>
     </div>
 </div>

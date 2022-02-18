@@ -1,0 +1,12 @@
+.dashboard-container {
+    margin: 10px auto;
+}
+
+.exercise-row {
+    background-color: rgb(238, 238, 238);
+    border: 1px solid black;
+    margin: 10px 0;
+    &:hover {
+        background-color: gold;
+    }
+}
