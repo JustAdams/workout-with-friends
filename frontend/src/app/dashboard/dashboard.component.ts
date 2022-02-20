@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
 
   exercises?: Exercise[];
   searchInput?: string;
+  showAddExercise = false;
 
   constructor(private exerciseService: ExerciseService) { }
 
@@ -22,6 +23,10 @@ export class DashboardComponent implements OnInit {
 
   getExercises(): void {
     this.exercises = this.exerciseService.getExercises();
+  }
+
+  toggleAddExercise(): void {
+    this.showAddExercise = !this.showAddExercise;
   }
 
 }

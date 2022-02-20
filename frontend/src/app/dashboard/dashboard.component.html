@@ -39,4 +39,10 @@
     </div>
 
   </div>
+  <div>
+    <button (click)="toggleAddExercise()">Add Exercise</button>
+  </div>
+  <div *ngIf="showAddExercise">
+    <app-new-exercise></app-new-exercise>
+  </div>
 </div>
