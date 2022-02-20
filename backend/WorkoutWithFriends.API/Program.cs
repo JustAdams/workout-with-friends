@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WorkoutWithFriends.API.Data;
 using WorkoutWithFriends.API.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddDbContext<ExerciseContext>(opt => opt.UseInMemoryDatabase("E
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddTransient<ExerciseSeeder>();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

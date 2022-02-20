@@ -1,4 +1,4 @@
-﻿namespace WorkoutWithFriends.API.Models
+﻿namespace API.Models
 {
     public class ExerciseItem
     {
