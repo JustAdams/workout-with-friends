@@ -10,6 +10,7 @@ import { Exercise } from '../models/exercise';
 export class DashboardComponent implements OnInit {
 
   exercises?: Exercise[];
+  searchInput?: string;
 
   constructor() { }
 
@@ -20,5 +21,6 @@ export class DashboardComponent implements OnInit {
   getExercises(): void {
     this.exercises = EXERCISES;
   }
+
 
 }
