@@ -1,0 +1,34 @@
+﻿[
+  {
+    "id": 0,
+    "name": "Bench Press",
+    "reps": 8,
+    "weight": 225,
+    "day": "2022-02-01",
+    "person":  "Jeff"
+  },
+  {
+    "id": 1,
+    "name": "Bench Press",
+    "reps": 5,
+    "weight": 185,
+    "day": "2022-02-01",
+    "person": "Mark"
+  },
+  {
+    "id": 2,
+    "name": "Deadlift",
+    "reps": 8,
+    "weight": 655,
+    "day": "2022-02-02",
+    "person": "Cindy"
+  },
+  {
+    "id": 3,
+    "name": "Squat",
+    "reps": 10,
+    "weight": 200,
+    "day": "2022-01-15",
+    "person": "Jeff"
+  }
+]
