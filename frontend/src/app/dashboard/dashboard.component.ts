@@ -27,7 +27,11 @@ export class DashboardComponent implements OnInit {
 
   search(input: string): void {
     this.searchInput = input.toUpperCase();
-    this.exercises = this.exerciseService.getExercises().filter(e => e.name.toUpperCase().includes(this.searchInput!) || e.person.toUpperCase().includes(this.searchInput!));
+    this.exercises = this.exerciseService
+      .getExercises()
+      .filter(e => e.name.toUpperCase()
+      .includes(this.searchInput!) 
+        || e.person.toUpperCase().includes(this.searchInput!));
   }
 
   toggleAddExercise(): void {
