@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { delay } from 'rxjs';
 import { EXERCISES } from '../data/sample-exercises';
+import { ExerciseService } from '../exercise.service';
 import { Exercise } from '../models/exercise';
 
 @Component({
@@ -13,14 +14,14 @@ export class DashboardComponent implements OnInit {
   exercises?: Exercise[];
   searchInput?: string;
 
-  constructor() { }
+  constructor(private exerciseService: ExerciseService) { }
 
   ngOnInit(): void {
     this.getExercises();
   }
 
   getExercises(): void {
-    this.exercises = EXERCISES;
+    this.exercises = this.exerciseService.getExercises();
   }
 
 }
