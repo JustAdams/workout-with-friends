@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { delay } from 'rxjs';
 import { EXERCISES } from '../data/sample-exercises';
 import { Exercise } from '../models/exercise';
 
@@ -21,6 +22,5 @@ export class DashboardComponent implements OnInit {
   getExercises(): void {
     this.exercises = EXERCISES;
   }
-
 
 }
