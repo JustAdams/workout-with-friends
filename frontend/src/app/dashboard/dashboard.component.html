@@ -1,6 +1,6 @@
 <div class="container dashboard-container text-center">
   <h1>Exercise Dashboard</h1>
-  <input placeholder="search..." />
+  <input #searchBox placeholder="search..." (input)="search(searchBox.value)" />
 
   <p>Recent exercises:</p>
 
