@@ -8,13 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SettingsComponent } from './settings/settings.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     NavBarComponent,
-    SettingsComponent
+    SettingsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
