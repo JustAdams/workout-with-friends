@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-exercise.component.scss']
 })
 export class NewExerciseComponent implements OnInit {
+  exerciseName!: string;
 
   constructor() { }
 
