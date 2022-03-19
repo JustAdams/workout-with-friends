@@ -9,7 +9,8 @@ builder.Services.AddControllers();
 
 // Using program memory for now, will reset every time you restart the project
 // TODO: Switching to Sqlite in the future when hosting on Azure
-builder.Services.AddDbContext<ExerciseContext>(opt => opt.UseInMemoryDatabase("ExerciseList"));
+//builder.Services.AddDbContext<ExerciseContext>(opt => opt.UseInMemoryDatabase("ExerciseList"));
+builder.Services.AddSqlite<ExerciseContext>("Data Source=ExerciseList.db");
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

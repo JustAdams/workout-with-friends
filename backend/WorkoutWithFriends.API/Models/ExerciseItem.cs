@@ -6,7 +6,7 @@
         public string? Name { get; set; }
         public int Reps { get; set; }
         public int Weight { get; set; }
-        public DateTime Day { get; set; }
+        public string? Day { get; set; }
         public string? Person { get; set; }
     }
 }

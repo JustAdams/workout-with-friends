@@ -9,6 +9,6 @@ namespace WorkoutWithFriends.API.Models
 
         }
 
-        public DbSet<ExerciseItem> ExerciseItems { get; set; }
+        public DbSet<ExerciseItem> ExerciseItems => Set<ExerciseItem>();
     }
 }
