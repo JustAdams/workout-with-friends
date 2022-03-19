@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { delay } from 'rxjs';
-import { EXERCISES } from '../data/sample-exercises';
-import { ExerciseService } from '../exercise.service';
+import { WorkoutService } from '../workout.service';
 import { Exercise } from '../models/exercise';
 
 @Component({
@@ -15,14 +13,14 @@ export class DashboardComponent implements OnInit {
   searchInput?: string;
   showAddExercise = false;
 
-  constructor(private exerciseService: ExerciseService) { }
+  constructor(private workoutService: WorkoutService) { }
 
   ngOnInit(): void {
     this.getExercises();
   }
 
   getExercises(): void {
-    this.exercises = this.exerciseService.getExercises();
+    this.exercises = this.workoutService.getWorkouts();
   }
 
   toggleAddExercise(): void {

@@ -4,11 +4,11 @@ import { EXERCISES } from './data/sample-exercises';
 @Injectable({
   providedIn: 'root'
 })
-export class ExerciseService {
+export class WorkoutService {
 
   constructor() { }
 
-  getExercises() {
+  getWorkouts() {
     return EXERCISES;
   }
 }
