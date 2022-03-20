@@ -13,12 +13,12 @@
     </div>
 
     <div class="exercise-list">
-      <div *ngIf="exercises?.length; else loading_bar">
-        <div *ngFor="let exercise of exercises" class="row exercise-row">
-          <p class="col-3">{{ exercise.person }}</p>
-          <p class="col-3">{{ exercise.name }}</p>
-          <p class="col-3">{{ exercise.weight }}lbs</p>
-          <p class="col-3">{{ exercise.reps }} reps</p>
+      <div *ngIf="workouts?.length; else loading_bar">
+        <div *ngFor="let workout of workouts" class="row exercise-row">
+          <p class="col-3">{{ workout.person }}</p>
+          <p class="col-3">{{ workout.name }}</p>
+          <p class="col-3">{{ workout.weight }}lbs</p>
+          <p class="col-3">{{ workout.reps }} reps</p>
         </div>
       </div>
 

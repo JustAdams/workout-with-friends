@@ -1,6 +1,6 @@
-import { Exercise } from "../models/exercise";
+import { Workout } from "../models/workout";
 
-export const EXERCISES: Exercise[] = [
+export const EXERCISES: Workout[] = [
     {
         id: 1,
         name: "Bench Press",
