@@ -15,8 +15,8 @@
     <div class="exercise-list">
       <div *ngIf="workouts?.length; else loading_bar">
         <div *ngFor="let workout of workouts" class="row exercise-row">
-          <p class="col-3">{{ workout.person }}</p>
-          <p class="col-3">{{ workout.name }}</p>
+          <p class="col-3">{{ workout.personName }}</p>
+          <p class="col-3">{{ workout.workoutName }}</p>
           <p class="col-3">{{ workout.weight }}lbs</p>
           <p class="col-3">{{ workout.reps }} reps</p>
         </div>

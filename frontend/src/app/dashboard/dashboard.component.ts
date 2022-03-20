@@ -25,6 +25,7 @@ export class DashboardComponent implements OnInit {
   }
 
   toggleAddExercise(): void {
+    console.log(this.workouts);
     this.showAddExercise = !this.showAddExercise;
   }
 

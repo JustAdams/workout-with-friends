@@ -1,7 +1,8 @@
 export interface Workout {
     id: number;
-    name: string;
+    workoutName: string;
     reps: number;
     weight: number;
-    person: string;
+    day: string;
+    personName: string;
 }
