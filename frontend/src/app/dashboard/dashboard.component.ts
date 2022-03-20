@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkoutService } from '../workout.service';
-import { Exercise } from '../models/exercise';
+import { Workout } from '../models/workout';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +9,7 @@ import { Exercise } from '../models/exercise';
 })
 export class DashboardComponent implements OnInit {
 
-  exercises?: Exercise[];
+  workouts?: Workout[];
   searchInput?: string;
   showAddExercise = false;
 
@@ -20,10 +20,12 @@ export class DashboardComponent implements OnInit {
   }
 
   getExercises(): void {
-    this.exercises = this.workoutService.getWorkouts();
+    this.workoutService.getWorkouts()
+      .subscribe(workouts => this.workouts = workouts);
   }
 
   toggleAddExercise(): void {
+    console.log(this.workouts);
     this.showAddExercise = !this.showAddExercise;
   }
 
