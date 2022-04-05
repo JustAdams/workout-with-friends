@@ -1,6 +1,0 @@
-{
-    "/api/workouts": {
-        "target": "https://localhost:7165",
-        "secure": false
-    }
-}
