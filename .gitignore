@@ -514,3 +514,4 @@ baseline.json
 
 # Husky
 .husky/_
+backend/API/Workouts.db
