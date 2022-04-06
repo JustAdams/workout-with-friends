@@ -2,6 +2,7 @@ import { Workout } from "../models/Workout";
 
 export const sampleWorkouts: Workout[] = [
     {
+        id: 1,
         workoutName: "Bench Press",
         reps: 5,
         weight: 180,
@@ -9,6 +10,7 @@ export const sampleWorkouts: Workout[] = [
         personName: "Mark Marker"
     },
     {
+        id: 2,
         workoutName: "Bench Press",
         reps: 8,
         weight: 225,
@@ -16,6 +18,7 @@ export const sampleWorkouts: Workout[] = [
         personName: "Sarah Barter"
     },
     {
+        id: 3,
         workoutName: "Squat",
         reps: 15,
         weight: 900,
