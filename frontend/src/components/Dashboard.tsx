@@ -21,12 +21,13 @@ function Dashboard() {
       })
       .catch((err) => {
         console.log(err);
-        alert("error loading from database, is the server running?");
       });
   }, []);
 
   return (
     <>
+      <h1>Dashboard</h1>
+      <hr />
         {isLoading 
             ? <LoadingSpinner /> 
             : <WorkoutTable workouts={workouts} />

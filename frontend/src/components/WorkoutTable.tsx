@@ -1,4 +1,5 @@
 import React from "react";
+import Table from 'react-bootstrap/Table'
 import { Workout } from "../models/Workout";
 
 interface Props {
@@ -8,8 +9,8 @@ interface Props {
 export default function WorkoutTable({ workouts }: Props) {
   return (
     <>
-      <h3>Previous Workouts</h3>
-      <table>
+    <h3>Previous Workouts</h3>
+    <Table striped bordered hover>
         <thead>
           <tr>
             <th>Workout</th>
@@ -30,7 +31,7 @@ export default function WorkoutTable({ workouts }: Props) {
             </tr>
           ))}
         </tbody>
-      </table>
+    </Table>
     </>
   );
 }
