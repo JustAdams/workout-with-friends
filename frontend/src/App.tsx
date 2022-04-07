@@ -4,11 +4,12 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Dashboard from './components/Dashboard';
+import NavBar from './components/ui/NavBar';
 
 function App() {
   return (
     <div className='App'>
-      <h1>Workout with Friends</h1>
+      <NavBar />
       <Dashboard />
     </div>
   );

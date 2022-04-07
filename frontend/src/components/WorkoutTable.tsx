@@ -8,6 +8,8 @@ interface Props {
 
 export default function WorkoutTable({ workouts }: Props) {
   return (
+    <>
+    <h3>Previous Workouts</h3>
     <Table striped bordered hover>
         <thead>
           <tr>
@@ -30,5 +32,6 @@ export default function WorkoutTable({ workouts }: Props) {
           ))}
         </tbody>
     </Table>
+    </>
   );
 }
