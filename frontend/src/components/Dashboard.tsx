@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { sampleWorkouts } from "../data/SampleWorkouts";
 import { Workout } from "../models/Workout";
 import LoadingSpinner from "./ui/LoadingSpinner";
-import WorkoutCard from "./WorkoutCard";
 import WorkoutTable from "./WorkoutTable";
 
 function Dashboard() {

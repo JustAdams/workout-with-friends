@@ -5,8 +5,9 @@ export default function LoadingSpinner() {
   return (
     <>
 <Spinner animation="border" role="status">
-  <span className="visually-hidden">Loading...</span>
+  <span className="visually-hidden">Loading workouts...</span>
 </Spinner>
+<p>Loading workouts...</p>
     </>
   );
 }
