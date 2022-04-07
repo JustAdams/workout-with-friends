@@ -21,7 +21,6 @@ function Dashboard() {
       })
       .catch((err) => {
         console.log(err);
-        alert("error loading from database, is the server running?");
       });
   }, []);
 
