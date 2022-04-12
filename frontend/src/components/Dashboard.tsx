@@ -4,6 +4,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { sampleWorkouts } from "../data/SampleWorkouts";
 import { Workout } from "../models/Workout";
 import LoadingSpinner from "./ui/LoadingSpinner";
+import WorkoutForm from "./WorkoutForm";
 import WorkoutTable from "./WorkoutTable";
 
 function Dashboard() {
@@ -34,33 +35,7 @@ function Dashboard() {
       <hr />
       <Button onClick={handleShow}>Add Workout</Button>
 
-      <Modal show={showForm} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Enter Workout</Modal.Title>
-          <Modal.Body>
-            <Form>
-              <Form.Group className="mb-3">
-                <Form.Control placeholder="Enter email" />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control placeholder="Enter workout" />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control placeholder="Enter weight" />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control placeholder="Enter reps" />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control placeholder="Enter name" />
-              </Form.Group>
-              <Button type="submit">
-                Submit
-              </Button>
-            </Form>
-          </Modal.Body>
-        </Modal.Header>
-      </Modal>
+      <WorkoutForm showForm={showForm} handleClose={handleClose} />
 
         {isLoading 
             ? <LoadingSpinner /> 
