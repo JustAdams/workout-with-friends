@@ -1,0 +1,48 @@
+<div class="container dashboard-container text-center">
+  <h1>Exercise Dashboard</h1>
+  <input placeholder="search..." />
+
+  <p>Recent exercises:</p>
+
+  <div>
+    <div class="row">
+      <p class="col-3">Who</p>
+      <p class="col-3">Exercise</p>
+      <p class="col-3">Weight</p>
+      <p class="col-3">Reps</p>
+    </div>
+
+    <div class="exercise-list">
+      <div *ngIf="workouts?.length; else loading_bar">
+        <div *ngFor="let workout of workouts" class="row exercise-row">
+          <p class="col-3">{{ workout.personName }}</p>
+          <p class="col-3">{{ workout.workoutName }}</p>
+          <p class="col-3">{{ workout.weight }}lbs</p>
+          <p class="col-3">{{ workout.reps }} reps</p>
+        </div>
+      </div>
+
+      <ng-template #loading_bar>
+        <div class="spinner-grow mx-1 col-3" role="status">
+          <span class="sr-only"></span>
+        </div>
+        <div class="spinner-grow mx-1 col-3" role="status">
+          <span class="sr-only"></span>
+        </div>
+        <div class="spinner-grow mx-1 col-3" role="status">
+          <span class="sr-only"></span>
+        </div>
+        <div class="spinner-grow mx-1 col-3" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </ng-template>
+    </div>
+
+  </div>
+  <div>
+    <button (click)="toggleAddExercise()">Add Exercise</button>
+  </div>
+  <div *ngIf="showAddExercise">
+    <app-new-exercise></app-new-exercise>
+  </div>
+</div>
