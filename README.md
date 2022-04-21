@@ -4,6 +4,8 @@ A web app to help track and compare lifting records with your peers
 
 To run on local machine:
 
-    API: dotnet run
+    API: 
+        Update migrations and initalize a database: dotnet ef database update
+        Start the server: dotnet run
     
-    frontend: npm start
+    frontend: ng serve
