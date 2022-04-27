@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkoutService } from '../workout.service';
 import { Workout } from '../models/workout';
+import { faCirclePlus, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +9,8 @@ import { Workout } from '../models/workout';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+
+  faPlus = faCirclePlus;
 
   workouts?: Workout[];
   searchInput?: string;

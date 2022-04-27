@@ -1,8 +1,10 @@
-export interface Workout {
-    id: number;
-    workoutName: string;
-    reps: number;
-    weight: number;
-    day: string;
-    personName: string;
+export class Workout {
+  constructor(
+    public id: number,
+    public workoutName: string,
+    public reps: number,
+    public weight: number,
+    public day: string,
+    public personName: string
+  ) {}
 }

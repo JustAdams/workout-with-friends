@@ -40,7 +40,7 @@
 
   </div>
   <div>
-    <button (click)="toggleAddExercise()">Add Exercise</button>
+    <button (click)="toggleAddExercise()" class="primary"><fa-icon [icon]="faPlus"></fa-icon> Exercise</button>
   </div>
   <div *ngIf="showAddExercise">
     <app-new-exercise></app-new-exercise>
