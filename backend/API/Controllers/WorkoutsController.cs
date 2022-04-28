@@ -25,6 +25,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Workout>>> GetWorkouts()
         {
+            Console.WriteLine("getting workouts");
             return await _context.Workouts.ToListAsync();
         }
 
@@ -76,7 +77,7 @@ namespace API.Controllers
         // POST: api/Workouts
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Workout>> PostWorkout(Workout workout)
+        public async Task<ActionResult<Workout>> PostWorkout([FromBody] Workout workout)
         {
             _context.Workouts.Add(workout);
             await _context.SaveChangesAsync();
